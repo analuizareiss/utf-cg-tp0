@@ -27,7 +27,7 @@ utf-cg-tp0/
 ├── style.css       # estilos
 ├── script.js       # lógica da abelhinha
 ├── ana.jpg         # foto de perfil
-├── abelha.png         # foto de perfil
+├── abelha.png         # foto da abelinha
 └── README.md        # este arquivo
 ```
 
