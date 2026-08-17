@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Sora', sans-serif;
+  background: radial-gradient(circle at top left, #2b2d42, #1a1c2c 65%);
+  color: #edf2f4;
+}
+
+.card {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 760px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.foto {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ef8354;
+  flex-shrink: 0;
+}
+
+.conteudo h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+  color: #ef8354;
+}
+
+.conteudo p {
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  color: #d8dbe2;
+}
+
+#botao-misterioso,
+#botao-parar {
+  margin-top: 0.5rem;
+  margin-right: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+#botao-misterioso {
+  color: #1a1c2c;
+  background: #ef8354;
+}
+
+#botao-misterioso:hover {
+  background: #f4a261;
+  transform: translateY(-2px);
+}
+
+#botao-parar {
+  color: #edf2f4;
+  background: transparent;
+  border: 2px solid #ef8354;
+}
+
+#botao-parar:hover:not(:disabled) {
+  background: rgba(239, 131, 84, 0.15);
+  transform: translateY(-2px);
+}
+
+#botao-parar:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#botao-misterioso:focus-visible,
+#botao-parar:focus-visible {
+  outline: 3px solid #edf2f4;
+  outline-offset: 2px;
+}
+
+.escondido {
+  display: none;
+}
+
+#abelha {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  display: none;
+  transition: top 0.6s ease, left 0.6s ease;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.8rem;
+  }
+}
